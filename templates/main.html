@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Disease Predictor</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Website Title -->
+
+  <div class="container">
+    <h2 class='container-heading'><span class="heading_font">Heart Disease Predictor</span></h2>
+    <div class='description'>
+      <p>A Machine Learning Web Application that predicits chances of having heart Disease or not, Built with Flask and Deployed using Heroku.</p><br>
+        <p>(Note:This model is 82.67% accurate)</p>
+    </div>
+  </div>
+
+  <!-- Text Area -->
+  <div class="ml-container">
+    <form action="{{ url_for('predict')}}" method="POST"> 
+
+      
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" placeholder="Your age.."><br>
+
+
+
+        <label for="sex">Sex</label>
+        <select id="sex" name="sex">
+          <option selected>----select option----</option>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select><br>
+
+
+
+        <label for="cp">Chest Pain Type</label>
+        <select id="cp" name="cp">
+          <option selected>----select option----</option>
+          <option value="0">Typical Angina</option>
+          <option value="1">Atypical Angina</option>
+          <option value="2">Non-anginal Pain</option>
+          <option value="3">Asymtomatic</option>
+        </select><br>
+
+
+
+        <label for="trestbps">Resting Blood Pressure</label>
+        <input type="text" id="trestbps" name="trestbps" placeholder="A number in range [94-200] mmHg"><br>
+
+
+
+        <label for="chol">Serum Cholesterol</label>
+        <input type="text" id="chol" name="chol" placeholder="A number in range [126-564] mg/dl"><br>
+
+
+
+        <label for="fbs">Fasting Blood Sugar</label>
+        <select id="fbs" name="fbs">
+          <option selected>----select option----</option>
+          <option value="1">Greater than 120 mg/dl</option>
+          <option value="0">Less than 120 mg/dl</option>
+        </select><br>
+
+
+
+        <label for="restecg">Resting ECG Results</label>
+        <select id="restecg" name="restecg">
+          <option selected>----select option----</option>
+          <option value="0">Normal</option>
+          <option value="1">Having ST-T wave abnormality</option>
+          <option value="2">Probable or definite left ventricular
+            hypertrophy</option>
+        </select><br>
+
+
+
+        <label for="thalach">Max Heart Rate </label>
+        <input type="text" id="thalach" name="thalach" placeholder="A number in range [71-202] bpm"><br>
+
+
+        <label for="exang">Exercise-induced Angina</label>
+        <select id="exang" name="exang">
+          <option selected>----select option----</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select><br>
+
+
+        <label for="oldpeak">ST depression</label>
+        <input type="text" id="oldpeak" name="oldpeak" placeholder="ST depression, typically in [0-6.2]"><br>
+
+
+
+        <label for="slope">slope of the peak exercise ST segment</label>
+        <select id="slope" name="slope">
+          <option selected>----select option----</option>
+          <option value="0">Upsloping</option>
+          <option value="1">Flat</option>
+          <option value="2">Downsloping</option>
+        </select><br>
+        
+
+        <label for="ca">Number of Major vessels</label>
+        <input type="text" id="ca" name="ca" placeholder="Typically in [0-4]"><br> 
+                          
+
+
+        <label for="thal">Thalassemia</label> 
+        <select id="thal" name="thal">
+          <option selected>----select option----</option>
+          <option value="0">Normal</option>
+          <option value="1">Fixed Defect</option> 
+          <option value="2">Reversible Defect</option>  
+        </select><br>
+
+      
+
+      <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class='footer'>
+    <div class="contact">
+      <a target="_blank" href="https://github.com/asthasharma98/Heart-Disease-Prediction-Deployment"><i
+          class="fab fa-github fa-lg contact-icon"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/astha-sharma-47266b11b/"><i
+          class="fab fa-linkedin fa-lg contact-icon"></i></a>
+    </div>
+    <p class='footer-description'>Made by Astha Sharma.</p>
+  </div>
+
+</body>
+
+</html>
