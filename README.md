@@ -59,6 +59,21 @@ next step would be to follow the instruction given on [Heroku Documentation](htt
 
 ### Technologies used 
 
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+
+### Future work 
+
+- improve model performance.
+- Add more better styling to the user interface.
+
+### credit 
+
+- A big thanks to [Anuj vyas](https://github.com/anujvyas/Diabetes-Prediction-Deployment) as I got the desinging idea of web app from his projects on github.
+
+**Some Useful Resources**
+
+- **Flask Quickstart Documentation** : [https://flask.palletsprojects.com/en/1.1.x/quickstart/](https://flask.palletsprojects.com/en/1.1.x/quickstart/)
+
 
 
 
